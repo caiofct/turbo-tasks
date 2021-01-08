@@ -1,0 +1,14 @@
+<h1>Editing Task</h1>
+
+<%= turbo_frame_tag "edit_task", target: "_top" do %>
+  <%= form_with(model: @task) do |form| %>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <%= form.submit %>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to 'Show', @task %> |
+<%= link_to 'Back', tasks_path %>
